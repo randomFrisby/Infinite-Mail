@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+
+    <style>
+        #whole{
+            display: flex;
+            border: 1px solid;
+            height: 1050px;
+        }
+        #sidepanel{
+            border: 1px solid;
+            width: 20%;
+            background-color:rgb(26,46,68);
+            display: grid;
+            color: white;
+        }
+        .shift{
+            padding-left: 10%;
+            color: yellow;
+        }
+        .shift>div:hover{
+            background-color: brown;
+        } 
+        #logo{
+            text-align: center;
+        }
+        #logo img{
+            width: 70%;
+            height: 140px;
+        }
+        #menu>div{
+            border: 1px solid black;
+            display: flex;
+            padding: 7%;
+            gap: 5%;
+        }
+        #menu>div:hover{
+            background-color: rgb(56,68,94);
+            cursor: pointer;
+        }
+        #mainpanel{
+            border: 1px solid red;                
+        }
+        #nav{
+            display: flex;
+            justify-content: space-between;
+            padding: 1%;
+            border-bottom: 1px solid grey;
+        }
+        #nav>div{
+            display: flex;
+            gap: 10px;
+        }
+        #threelines:hover{
+            cursor:pointer;
+        }
+    </style>
+
+<script src="https://kit.fontawesome.com/81ff3434ff.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id="whole">
+        <div id="sidepanel" style="display: block;">
+            <div id="logo">
+                <img src="https://i.ibb.co/72bL3th/Light-Blue-Sci-Fi-Futuristic-Animated-Logo.png" alt="logo">
+            </div>
+            <div id="menu">
+                <div>
+                    <div><i class="fa-solid fa-house"></i></div>
+                    <div>Home</div>
+                </div>
+                <div>
+                    <div><i class="fa-solid fa-paper-plane"></i></div>
+                    <div>Email API</div>
+                </div>
+                <div class="shift" style="display: none;" id="1">
+                    <div style="padding-left: 12%;">
+                    <div>Email Logs</div>
+                    <div>Stats</div>
+                    <div>Mailbox Providers</div>
+                    <div>Email Categories</div>
+                    <div>Sending Domains</div>
+                    <div>Suppressions</div>
+                    <div>Deliverability Alerts</div>
+                    </div>
+                </div>
+                <div>
+                    <div><i class="fa-solid fa-envelope"></i></div>
+                    <div>Sandbox</div>
+                </div>
+                <div class="shift" style="display: none;" id="3">
+                    <div></div>
+                    <div>Inboxes</div>
+                </div>
+                <div>
+                    <div><i class="fa-solid fa-credit-card"></i></div>
+                    <div>Billing</div>
+                </div>
+                <div class="shift" style="display: none;" id="5">
+                    <div>Dashboard</div>
+                    <div>Plans[Sandbox]</div>
+                    <div>Plans[Email API]</div>
+                    <div>Payment Method</div>
+                    <div>Settings</div>
+                </div>
+                <div>
+                    <div><i class="fa-solid fa-user"></i></div>
+                    <div>User Management</div>
+                </div>
+                <div>
+                    <div><i class="fa-solid fa-key"></i></div>
+                    <div>API</div>
+                </div>
+                <div class="shift" style="display: none;" id="8">
+                    <div>API Tokens</div>
+                    <div>CORS Domains</div>
+                </div>
+                <div>
+                    <div><i class="fa-solid fa-file"></i></div>
+                    <div>Account Settings</div>
+                </div>
+            </div>
+        </div>
+        <div id="mainpanel" style="width: 80%;">
+            <div id="nav">
+                <div>
+                    <div id="threelines"><i class="fa-solid fa-bars"></i></div>
+                    <div id="name">Home</div>
+                </div>
+                <div id="uname">xyz</div>
+            </div>
+            <div id="container"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    let bar=document.getElementById('threelines')
+    bar.addEventListener('click',()=>{
+        let sidepanel=document.getElementById('sidepanel') 
+        let check=sidepanel.style.display=='block'
+        sidepanel.style.display=check?'none':'block';
+
+        let mainpanel=document.getElementById('mainpanel')
+        let see=mainpanel.style.width=='80%'
+        mainpanel.style.width=see?'100%':'80%';
+    })
+
+    let menu=document.querySelectorAll('#menu>div')
+    menu.forEach((el,i)=>{
+
+        el.addEventListener('click',()=>{
+            console.log(i)
+            document.getElementById(i).style.display='block';
+        })       
+    })
+
+    let name=document.getElementById('name')
+    name.innerText='Home'
+</script>
+
