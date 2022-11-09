@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/email_log.css">
+    <title>Email Logs</title>
+</head>
+<body>
+    <div id="main">
+        <div id="side">
+            hello
+        </div>
+        <div id="logs">
+            <!-- Top Section  -->
+            <nav>
+                <div class="left page-title">
+                    Email Logs
+                </div>
+                <div class="right">
+                    <div class="total-messages-sent">
+                        <p>Total messages sent&nbsp;:&nbsp;&nbsp;</p>
+                        <p id="get-messages" class="font-bold">7</p>
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select id="day-filter" class="form-select">
+                        <option value="">Choose</option>
+                        <option value="today">Today</option>
+                        <option value="week">Week</option>
+                        <option value="month">Month</option>
+                    </select>
+                </div>
+            </nav>
+            <!-- Filter Section  -->
+            <div id="filter-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Spam</th>
+                            <th>Check Delivery</th>
+                            <th>Domain</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <select id="spam-filter" class="form-select">
+                                    <option value="">Choose</option>
+                                    <option value="spam">Spam</option>
+                                    <option value="not-spam">Not Spam</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select id="delivery-filter" class="form-select">
+                                    <option value="">Choose</option>
+                                    <option value="delivered">Delivered</option>
+                                    <option value="not-delivered">Not Delivered</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select id="domain-filter" class="form-select">
+                                    <option value="">Choose</option>
+                                    <option value="yahoo">Yahoo</option>
+                                    <option value="gmail">Gmail</option>
+                                    <option value="outlook">Outlook</option>
+                                    <option value="others">Others</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button id="clear-filter-btn" class="btn btn-primary">Reset Filters</button>
+            </div>
+            <!-- Table Section  -->
+            <div id="table-section">
+                <table class="table table-striped table-hover table-bordered">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Status</th>
+                        <th>Email</th>
+                        <th scope="col">Sent at</th>
+                        <th scope="col">Opens/Clicks</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div> 
+        <!-- end of logs  -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<script src="./scripts/email_log.js"></script>

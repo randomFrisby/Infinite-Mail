@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* nav > div {
+    border: 2px solid rebeccapurple;
+} */
+
+nav > div:first-child {
+    margin-left: 20px;
+}
+
+nav > div:last-child {
+    margin-right: 20px;
+}
+
+.page-title {
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right .total-messages-sent{
+    display: flex;
+    align-items: center;
+    min-width: 62%;
+}
+.total-messages-sent p {
+    margin: 0;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+#filter-section table {
+    width: 100%;
+}
+
+th, tr, td {
+    text-align: center;
+    padding: 10px;
+}
+ 
+#filter-section {
+    background: rgb(247, 247, 247);
+    margin: auto;
+    padding: 20px;
+}
+
+#filter-section > button {
+    display: block;
+    margin: auto;
+} 
+
+#table-section {
+    margin-top: 50px;
+}
+
+
+/* testing */
+
+#main {
+    display: flex;
+    width: 95%;
+    margin: 20px auto;
+}
+
+#side {
+    width: 12%;
+    border: 2px solid blue;
+}
+
+#logs {
+    border: 2px solid red;
+    width: 100%;
+}
+
+
