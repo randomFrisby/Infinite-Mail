@@ -1,0 +1,72 @@
+
+        #whole {
+            display: flex;
+            border: 1px solid;
+            height: 1200px;
+        }
+
+        #sidepanel {
+            border: 1px solid;
+            width: 20%;
+            background-color: rgb(26, 46, 68);
+            background-color: black;
+            display: grid;
+            color: white;
+        }
+
+        .menu-subcomponents>div {
+            padding: 5% 19%;
+            color: yellow;
+        }
+
+        .menu-subcomponents>div:hover {
+            background-color: rgb(56, 68, 94);
+            cursor: pointer;
+        }
+
+        #logo {
+            text-align: center;
+            padding-top: 2%;
+        }
+
+        #logo img {
+            width: 90%;
+            height: 80px;
+        }
+
+        .menu-components {
+            border: 1px solid black;
+            display: flex;
+            padding: 7%;
+            gap: 5%;
+        }
+
+        .menu-components:hover {
+            background-color: rgb(56, 68, 94);
+            cursor: pointer;
+        }
+
+        #mainpanel {
+            border: 1px solid red;
+        }
+
+        #nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 1%;
+            border-bottom: 1px solid grey;
+        }
+
+        #nav>div {
+            display: flex;
+            gap: 10px;
+        }
+
+        #threelines:hover {
+            cursor: pointer;
+        }
+
+        /* #menu>div:nth-child(3)>div{
+            background-color: red;
+        } */
+    
