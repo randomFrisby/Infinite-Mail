@@ -1,0 +1,67 @@
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.page-title {
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+#box-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box-layout {
+    width: 45%;
+    border: 1px solid black;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.box-layout img {
+    width: 100%;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.top-bottom-padding {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.lg-clr-text {
+    color: grey;
+}
+
+
+
+/* testing side bar  */
+#main {
+    display: flex;
+    width: 95%;
+    margin: 20px auto;
+}
+
+#side {
+    border: 2px solid blue;
+    min-width: 12%;
+}
+
+#home {
+    border: 2px solid red;
+    width: 100%;
+}
