@@ -119,7 +119,8 @@ const sendData = () => {
             "spam": 1,
             "sent_time": "08-11-2022",
             "clicks": 10,
-            "delivery": 0
+            "delivery": 0,
+            "message": "I hope you are having a wonderful day."
         },
         {
             "email": "xyz@yahoo.com",
@@ -127,7 +128,8 @@ const sendData = () => {
             "spam": 0,
             "sent_time": "10-09-2022",
             "clicks": 34,
-            "delivery": 1
+            "delivery": 1,
+            "message": "This sounds like a great idea, your product is exactly what we need."
         },
         {
             "email": "jkl@gmail.com",
@@ -135,23 +137,26 @@ const sendData = () => {
             "spam": 1,
             "sent_time": "20-03-2019",
             "clicks": 100,
-            "delivery": 1
+            "delivery": 1,
+            "message": "I'm following up on my previous email on the issue"
         },
         {
-            "email": "pqr@gmail.com",
+            "email": "pqr@outlook.com",
             "status": "Read",
             "spam": 1,
             "sent_time": "20-03-2019",
             "clicks": 78,
-            "delivery": 0
+            "delivery": 0,
+            "message": "Congrats on the recent funding for your startup - you should be having an exciting time ahead!"
         },
         {
-            "email": "mno@gmail.com",
+            "email": "mno@masai.com",
             "status": "Pending",
             "spam": 0,
             "sent_time": "20-03-2019",
             "clicks": 90,
-            "delivery": 1
+            "delivery": 1,
+            "message": "I promise that this is the last email you'll receive from me. This week."
         }
     ];
 };

@@ -61,6 +61,10 @@ const account_settings_functionality = (user) => {
                     if (confirm("Account will be deleted 🛑")) {
                         console.log("User will be deleted");
                         // DELETE request to the server
+                        // 1. POST data to `recently-deleted` 
+                        // 2. DELETE request to server
+                        recentlyDeleted(user);
+                        deleteFromServer(user);
                     }
                 };
                 break;
@@ -73,11 +77,8 @@ const account_settings_functionality = (user) => {
     const update_name_btn = document.getElementById("update-name-btn-0685");
     update_name_btn.onclick = () => {
         let newUsername = document.getElementById("update-name-0685").value;
-        user.name = newUsername;
-        content.innerHTML = accountDetailsComponents();
-        getUserContent(user);
         // PATCH request to update the username;
-        patchrequest();
+        patchRequest(user, newUsername);
     };
 };
 
@@ -91,8 +92,58 @@ const getUserContent = ({ id, name }) => {
     user_id.textContent = id;
 };
 
-function patchrequest () {
+const patchRequest = async ({ id }, newUsername) => {
     console.log("making patch request");
+    let send_this_data = {
+        "name": newUsername
+    };
+    let res = await fetch(`http://localhost:3000/users/${id}`, {
+        method: 'PATCH',
+        body: JSON.stringify(send_this_data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    let data = await res.json();
 }
+
+const recentlyDeleted = async (user) => {
+
+    try {
+        let res = await fetch(`http://localhost:3000/recently-deleted`, {
+            method: 'POST',
+            body: JSON.stringify(user),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        let data = await res.json();
+    }
+    
+    catch(err) {
+        alert("Account doesn't exists! 😐");
+        // redirect to login page when account deleted or doesn't exist
+        window.location.href = "login.html";
+    }
+};
+
+
+const deleteFromServer = async ({ id }) => {
+     
+    try {
+        let res = await fetch(`http://localhost:3000/users/${id}`, {
+            method: "DELETE",
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+    
+        let data = await res.json();
+    }
+    catch(err) {
+        window.location.href = "login.html";
+    }
+};
 
 export { account_settings_functionality };
