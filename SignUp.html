@@ -17,8 +17,8 @@
             <img src="https://i.ibb.co/xFm0fXk/Light-Blue-Sci-Fi-Futuristic-Animated-Logo.png" alt="Error">
         </div>
         <div id="log-sig">
-            <a href="Login.html"><button id="log">Log In</button></a>
             <a href="Signup.html"><button id="sig">Sign Up</button></a>
+            <a href="Login.html"><button id="log">Log In</button></a>
         </div>
     </div>
  <!-- Navbar Close  -->
@@ -41,7 +41,7 @@
 
                <div id="OR"><p>OR</p></div>
 
-               <div class="sig" id="sig-up" onclick="openInput()"><p>Sign Up With Your Email</p></div>
+               <div class="sig" id="sig-up"><p>Sign Up With Your Email</p></div>
 
                <div id="detail">
                 <p>By creating a Mailtrap account, you agree to our
@@ -54,15 +54,15 @@
 
                <div  class="user-det" >
                 <p class="names">Name</p>
-                <input type="text"   id="username" class="use-inp">
+                <input type="text" id="username" class="use-inp">
                 </div>
                 <div class="user-det">
                 <p class="names">Email</p>
-                <input type="text"  id="email" class="use-inp">
+                <input type="email" id="email" class="use-inp">
             </div>
             <div class="user-det">
                 <p class="names">Password</p>
-                <input type="text"  id="password" class="use-inp">
+                <input type="password" id="password" class="use-inp">
                </div>
 
                <!-- <div class="user-det">
@@ -72,7 +72,7 @@
 
                <div class="eml-con"><p>You will receive the confirmation email after submitting this form.</p></div>
 
-               <div class="sign" onclick="Register()"><p>Sign Up</p></div>
+               <div class="sign" id="register"><p>Sign Up</p></div>
 
                <div id="details">
                 <p>By creating a Mailtrap account, you agree to our
@@ -128,7 +128,7 @@
         <div class="chil2">
             <h4>Railsware Experience</h4>
             <p>Railsware Blog</p>
-            <p>Сoupler.io</p>
+            <p>Coupler.io</p>
             <p>Smart Checklist for Jira</p>
         </div>
         <div class="chil2">
@@ -157,4 +157,4 @@
     
 </body>
 </html>
-<script src="./scripts/SignUp.js"></script>
+<script type="module" src="./scripts/SignUp.js"></script>
