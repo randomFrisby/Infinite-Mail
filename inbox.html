@@ -106,6 +106,17 @@
             margin: 1%;
             border-radius: 5px;
         }
+        #appendMail{
+            border: 0px solid;
+        }
+        .eachMail{
+            border: 1px solid;
+            margin: 2% 0%;
+            padding-left: 3%;
+            background-color: aqua;
+            border-left: none;
+            border-right: none;
+        }
     </style>
     <script src="https://kit.fontawesome.com/81ff3434ff.js" crossorigin="anonymous"></script>
 </head>
@@ -125,7 +136,7 @@
                     <div><i class="fa-solid fa-gear"></i></div>
                 </div>
             </div>
-            <div></div>
+            <div id="appendMail"></div>
         </div>
         <div id="inbox-infopanel">
             <h2>My Inbox</h2>
@@ -261,7 +272,7 @@
                                     port: 2525,<br>
                                     auth: {<br>
                                     user: <span class="terminal-redtext">"bee30d66e96433",</span><br>
-                                    pass: <span class="terminal-redtext">"30adbd2eeec60a"</span><br>
+                                    pass: <span id="mailpass" class="terminal-redtext">30adbd2eeec60a</span><br>
                                     }<br>
                                 });
                             </div>
@@ -385,6 +396,43 @@
             document.getElementById('code-first').style.display='none'
             document.getElementById('code-second').style.display='block'
         }
+    }      
+    
+    //--------fetching data from server-------------------
+    let fetchdata=async()=>{
+        try{
+            let api='http://localhost:3000/posts'
+            let ftch=await fetch(api)
+            let maildata=await ftch.json();
+            console.log('maildata: ', maildata);
+            pend(maildata)
+        }
+        catch(err){
+            console.log('err: ', err);
+        }
     }
-        
+    fetchdata()
+    let pend=(maildata)=>{
+        maildata.forEach((el)=>{
+            let originalPass=document.getElementById('mailpass').innerText
+            console.log(originalPass)
+            console.log(el.auth.pass)
+            if(originalPass==el.auth.pass)
+            {
+                let dv=document.createElement('div')
+                let message=document.createElement('h3')
+                let bound=document.createElement('p')
+
+                message.innerText=el.body;
+                bound.innerText=`To: ${el.to}`;
+                dv.append(message,bound)
+                dv.setAttribute('class','eachMail')
+                
+                document.getElementById('appendMail').append(dv)
+                console.log('mike')
+            }
+            
+        })
+    }
+
 </script>
