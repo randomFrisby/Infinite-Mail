@@ -2,7 +2,7 @@
 
 # Team Name :- Infinite Mail
 
-![Project Logo](https://i.ibb.co/xFm0fXk/Light-Blue-Sci-Fi-Futuristic-Animated-Logo.png)
+![Project Logo](https://im5.ezgif.com/tmp/ezgif-5-03144ea90c.gif)
 
 fw20_0502 - Ranjeet Singh
 
