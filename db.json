@@ -1,0 +1,12 @@
+{
+  "users": [],
+  "admin": [
+    {
+      "id": "1",
+      "name": "Gaurav Singh",
+      "username": "randomFrisby",
+      "password": "123"
+    }
+  ],
+  "recently-deleted": []
+}
