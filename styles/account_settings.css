@@ -1,0 +1,86 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav > p{
+    font-size: 35px;
+    font-weight: 700;
+}
+
+#content-0685 p {
+    color: grey;
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 45%;
+}
+
+p strong {
+    color: black;
+}
+
+span {
+    color: royalblue;
+}
+span:hover {
+    text-decoration: underline;
+}
+
+#top-section-nav-0685 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid orange; */
+    max-width: fit-content;
+    padding: 5px 20px;
+}
+
+
+#top-section-nav-0685 > div {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#top-section-nav-0685 > div:not(:last-child) {
+    margin-right: 40px;
+}
+
+/* Style the buttons */
+.nav-area-0685 {
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  /* Style the active class (and buttons on mouse-over) */
+.active {
+    border-bottom: 4px solid #0D6EFD;
+  }
+
+#content-0685 {
+    margin-top: 40px;
+    padding: 5px 20px;
+}
+
+.grey-bg-0685 {
+    background-color: rgb(219, 217, 217);
+    border-radius: 12px;
+    padding: 6px 14px;
+}
+
+
+#delete-account-block-0685 {
+    border: 2px solid red;
+    border-radius: 10px;
+    width: 45%;
+    padding: 10px 18px;
+}
+
+#delete-account-block-0685 p {
+    max-width: 100%;
+}
+
+.red-clr {
+    color: red;
+}
