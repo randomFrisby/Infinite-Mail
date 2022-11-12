@@ -9,9 +9,10 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <!-- <link rel="stylesheet" href="./styles/email-logs.css">
-    <link rel="stylesheet" href="./styles/user-home.css"> -->
     <link rel="stylesheet" href="./styles/user.css">
+    <link rel="stylesheet" href="./styles/email_logs.css">
+    <link rel="stylesheet" href="./styles/user_home.css">
+    <link rel="stylesheet" href="./styles/account_settings.css">
 
     <script src="https://kit.fontawesome.com/81ff3434ff.js" crossorigin="anonymous"></script>
 
@@ -98,29 +99,95 @@
 
 <script type="module">
 
-    //import userHomeComponent from './components/user-home.js'
-    //import emailLogsComponent from './components/email_logs.js'
+    import userHomeComponent from './components/user_home.js' 
+    import emailLogsComponent from './components/email_logs.js'
+    import { email_logs_functionality } from "./scripts/functionality/email_logs.js";
+
+    import accountSettingsComponents from "./components/account_settings.js";
+    import { account_settings_functionality } from "./scripts/functionality/account_settings.js"
+
+    import api_token_components from "./components/api_token.js";
+    import { api_token_functionality } from "./scripts/functionality/api_token.js";
+
+
+    // 0. default container content will `userHomeComponent`
+    // 1. import all components files and associated functionality from respective folders
+    // 2. get user `id` from localStorage
+    // 3. GET request to the server using `id`
+    // 4. account-settings functionality will work with server
+
+    const user = {
+        "id": 1342,
+        "name": "user 1",
+        "username": "adgvasd90",
+        "password": "adgvasd90",
+        "today": 5,
+        "week": 10,
+        "month": 20,
+        "card": "24752 2149 2342",
+        "plan": "free",
+        "api_token": [
+            "3wriUcGo",
+            "2h0oH4K9",
+            "rBgoHJpB",
+            "RNrYb9xG",
+            "XOSDhiaH"
+        ],
+        "total": "3.5K",
+        "data": [
+            {
+                "email": "abc@email.com",
+                "status": "Unread",
+                "spam": 1,
+                "sent_time": "08-11-2022",
+                "clicks": 10,
+                "delivery": 0
+            },
+            {
+                "email": "xyz@yahoo.com",
+                "status": "Pending",
+                "spam": 0,
+                "sent_time": "10-09-2022",
+                "clicks": 34,
+                "delivery": 1
+            },
+            {
+                "email": "jkl@gmail.com",
+                "status": "Read",
+                "spam": 1,
+                "sent_time": "20-03-2019",
+                "clicks": 100,
+                "delivery": 1
+            }
+        ]
+    };
+
+    let user_name = document.getElementById("uname");
+    user_name.textContent = user.name;
 
     let container = document.getElementById('container')
+    container.innerHTML = userHomeComponent();
 
     //------------for appending components html in container-------------------
     let maincomp = document.querySelectorAll('.menu-components')
     maincomp.forEach((el, i) => {
         el.addEventListener('click', () => {
             switch (i) {
-                case 0: container.innerHTML = null
+                case 0: container.innerHTML = userHomeComponent();
                     break;
-                case 1: container.innerHTML = null
+                case 1: container.innerHTML = null;
                      break;
                 case 2: container.innerHTML = null
                      break;
                 case 3: container.innerHTML = null
                      break;
-                case 4: container.innerHTML = null
+                case 4: container.innerHTML = api_token_components();
+                api_token_functionality(user);
                      break;
                 case 5: container.innerHTML = null
                      break;
-                case 6: container.innerHTML = null
+                case 6: container.innerHTML = accountSettingsComponents();
+                account_settings_functionality(user);
                      break;
             }
         })
@@ -131,7 +198,8 @@
     emailapi.forEach((el, i) => {
         el.addEventListener('click', () => {
             switch (i) {
-                case 0: container.innerHTML = null
+                case 0: container.innerHTML = emailLogsComponent();
+                email_logs_functionality(user);
                     break;
                 case 1: container.innerHTML = null
                     break;
