@@ -12,78 +12,6 @@
     <!-- <link rel="stylesheet" href="./styles/email-logs.css">
     <link rel="stylesheet" href="./styles/user-home.css"> -->
     <link rel="stylesheet" href="./styles/user.css">
-    <!-- <style>
-        #whole {
-            display: flex;
-            border: 1px solid;
-            height: 1200px;
-        }
-
-        #sidepanel {
-            border: 1px solid;
-            width: 20%;
-            background-color: rgb(26, 46, 68);
-            background-color: black;
-            display: grid;
-            color: white;
-        }
-
-        .menu-subcomponents>div {
-            padding: 5% 19%;
-            color: yellow;
-        }
-
-        .menu-subcomponents>div:hover {
-            background-color: rgb(56, 68, 94);
-            cursor: pointer;
-        }
-
-        #logo {
-            text-align: center;
-            padding-top: 2%;
-        }
-
-        #logo img {
-            width: 90%;
-            height: 80px;
-        }
-
-        .menu-components {
-            border: 1px solid black;
-            display: flex;
-            padding: 7%;
-            gap: 5%;
-        }
-
-        .menu-components:hover {
-            background-color: rgb(56, 68, 94);
-            cursor: pointer;
-        }
-
-        #mainpanel {
-            border: 1px solid red;
-        }
-
-        #nav {
-            display: flex;
-            justify-content: space-between;
-            padding: 1%;
-            border-bottom: 1px solid grey;
-        }
-
-        #nav>div {
-            display: flex;
-            gap: 10px;
-        }
-
-        #threelines:hover {
-            cursor: pointer;
-        }
-
-        /* #menu>div:nth-child(3)>div{
-            background-color: red;
-        } */
-    </style> -->
 
     <script src="https://kit.fontawesome.com/81ff3434ff.js" crossorigin="anonymous"></script>
 
@@ -167,38 +95,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 <script src="./scripts/user.js"></script>
-<!-- <script>
-    let bar = document.getElementById('threelines')
-    bar.addEventListener('click', () => {
-        let sidepanel = document.getElementById('sidepanel')
-        let check = sidepanel.style.display == 'block'
-        sidepanel.style.display = check ? 'none' : 'block';
-
-        let mainpanel = document.getElementById('mainpanel')
-        let see = mainpanel.style.width == '80%'
-        mainpanel.style.width = see ? '100%' : '80%';
-    })
-
-    //---------appear and disapper effect of menu-subcomponents------------------    
-    let menu = document.querySelectorAll('.menu-components')
-    menu.forEach((el, i) => {
-        el.addEventListener('click', () => {
-            for (let j = 0; j < 6; j++) {
-                if (i == j) {
-                    document.getElementById(j).style.display = 'block';
-                    //console.log(j)
-                }
-                else if (j == 1 || j == 2 || j == 3 || j == 5) {
-                    document.getElementById(j).style.display = 'none';
-                    //console.log(j)
-                }
-            }
-        })
-    })
-
-    let name = document.getElementById('name')
-    name.innerText = 'Home'
-</script> -->
 
 <script type="module">
 
@@ -208,8 +104,8 @@
     let container = document.getElementById('container')
 
     //------------for appending components html in container-------------------
-    let men = document.querySelectorAll('.menu-components')
-    men.forEach((el, i) => {
+    let maincomp = document.querySelectorAll('.menu-components')
+    maincomp.forEach((el, i) => {
         el.addEventListener('click', () => {
             switch (i) {
                 case 0: container.innerHTML = null
@@ -230,9 +126,9 @@
         })
     })
 
-    //------------for appending sub-components html in container------------------------
-    let id = document.querySelectorAll('#menu>div:nth-child(3)>div')
-    id.forEach((el, i) => {
+    //---------for appending Email API sub-component's html in container------------------------
+    let emailapi = document.querySelectorAll('#menu>div:nth-child(3)>div')
+    emailapi.forEach((el, i) => {
         el.addEventListener('click', () => {
             switch (i) {
                 case 0: container.innerHTML = null
@@ -251,5 +147,11 @@
                     break;
             }
         })
-    })    
+    })   
+    
+ //-----------------appending Inbox html in container---------------
+    let sandinbox=document.querySelector('#menu>div:nth-child(5)>div') 
+     sandinbox.onclick=(()=>{
+         container.innerHTML=null;
+     })
 </script>
