@@ -63,7 +63,7 @@ const emailLogsComponent = () => {
             <div id="table-section">
                 <table class="table table-striped table-hover table-bordered">
                     <thead>
-                    <tr>
+                    <tr class="table-primary">
                         <th scope="col">#</th>
                         <th scope="col">Status</th>
                         <th>Email</th>

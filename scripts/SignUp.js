@@ -50,7 +50,7 @@ const Register = async() => {
 
     localStorage.setItem("userid", send_this_data.id);
 
-    console.log("send_this_data", send_this_data);
+    // console.log("send_this_data", send_this_data);
 
     let res = await fetch(`http://localhost:3000/users`, {
         method: "POST",
@@ -66,10 +66,13 @@ const Register = async() => {
 const createUserData = (signUpInfo) => {
 
     const user = {
-        id: randomNumber(1, 10),
+        id: randomNumber(10001, 99999),
+        email: signUpInfo.email,
         name: signUpInfo.username,
         username: randomAlpaNumeric(alphaNumeric, 15),
         password: randomAlpaNumeric(alphaNumeric, 15),
+        port: 3000,
+        host: `smtp.mailtrap.io`,
         today: randomNumber(10, 100),
         week: randomNumber(100, 500),
         month: randomNumber(500, 1000),

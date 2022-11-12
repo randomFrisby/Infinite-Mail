@@ -19,8 +19,16 @@ const account_settings_functionality = (user) => {
     // Loop through the buttons and add the active class to the current/clicked button
     for (let i = 0; i < btns.length; i++) {
         content.innerHTML = null;
+        // By default `account details` will be in the content div
         content.innerHTML = accountDetailsComponents();
         getUserContent(user);
+        // have the functionality whenever on the `account details` page
+        const update_name_btn = document.getElementById("update-name-btn-0685");
+        update_name_btn.onclick = () => {
+            let newUsername = document.getElementById("update-name-0685").value;
+            // PATCH request to update the username;
+            patchRequest(user, newUsername);
+        };
         btns[i].onclick = (event) => {
 
             activeBtn(event);
@@ -47,6 +55,12 @@ const account_settings_functionality = (user) => {
             case 0:
                 content.innerHTML = accountDetailsComponents();
                 getUserContent(user);
+                const update_name_btn = document.getElementById("update-name-btn-0685");
+                update_name_btn.onclick = () => {
+                    let newUsername = document.getElementById("update-name-0685").value;
+                    // PATCH request to update the username;
+                    patchRequest(user, newUsername);
+                };
                 break;
             case 1:
                 content.innerHTML = transferOwnershipComponents();
@@ -63,31 +77,22 @@ const account_settings_functionality = (user) => {
                         // DELETE request to the server
                         // 1. POST data to `recently-deleted` 
                         // 2. DELETE request to server
+                        // 3. Redirect to login page when account deleted or doesn't exist
                         recentlyDeleted(user);
                         deleteFromServer(user);
                     }
                 };
                 break;
-            default:
-                content.innerHTML = accountDetailsComponents();
-                break;
         };
-    };
-
-    const update_name_btn = document.getElementById("update-name-btn-0685");
-    update_name_btn.onclick = () => {
-        let newUsername = document.getElementById("update-name-0685").value;
-        // PATCH request to update the username;
-        patchRequest(user, newUsername);
     };
 };
 
 
-const getUserContent = ({ id, name }) => {
+const getUserContent = ({ id, name, email }) => {
     const user_name = document.getElementById("update-name-0685");
     user_name.placeholder = name;
     const user_email = document.getElementById("user-email-0685");
-    user_email.textContent = name;
+    user_email.textContent = email;
     const user_id = document.getElementById("account-id-0685");
     user_id.textContent = id;
 };
@@ -122,9 +127,7 @@ const recentlyDeleted = async (user) => {
     }
     
     catch(err) {
-        alert("Account doesn't exists! 😐");
-        // redirect to login page when account deleted or doesn't exist
-        window.location.href = "login.html";
+        console.log("err in line 117", err);
     }
 };
 
@@ -140,9 +143,10 @@ const deleteFromServer = async ({ id }) => {
         });
     
         let data = await res.json();
+        alert("Account has been deleted! 😐");
     }
     catch(err) {
-        window.location.href = "login.html";
+        console.log("error in line 140", err);
     }
 };
 
