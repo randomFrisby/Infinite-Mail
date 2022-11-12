@@ -299,3 +299,14 @@ body{
 #cchi-2{
     margin-top: 13px;
 }
+
+
+.use-inp{
+    outline: none;
+
+}
+.use-inp:focus {
+    
+    border: 2px solid #45e890;
+
+}
