@@ -6,8 +6,8 @@
         sidepanel.style.display = check ? 'none' : 'block';
 
         let mainpanel = document.getElementById('mainpanel')
-        let see = mainpanel.style.width == '80%'
-        mainpanel.style.width = see ? '100%' : '80%';
+        let see = mainpanel.style.width == '84%'
+        mainpanel.style.width = see ? '100%' : '84%';
     })
 
     //---------appear and disapper effect of menu-subcomponents------------------    

@@ -1,13 +1,13 @@
 
         #whole {
             display: flex;
-            border: 1px solid;
+            border: 0px solid;
             height: 1200px;
         }
 
         #sidepanel {
-            border: 1px solid;
-            width: 20%;
+            border: 0px solid;
+            width: 16%;
             background-color: rgb(26, 46, 68);
             background-color: black;
             display: grid;
@@ -35,7 +35,7 @@
         }
 
         .menu-components {
-            border: 1px solid black;
+            border: 0px solid black;
             display: flex;
             padding: 7%;
             gap: 5%;
@@ -47,7 +47,7 @@
         }
 
         #mainpanel {
-            border: 1px solid red;
+            border: 0px solid red;
         }
 
         #nav {
