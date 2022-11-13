@@ -1,0 +1,153 @@
+
+    #inbox-body {
+        display: flex;
+    }
+
+    #inbox-mailpanel {
+        border-top: 3px solid rgb(240, 241, 240);
+        width: 30%; 
+    }
+
+    #inbox-infopanel {
+        border: 3px solid rgb(240, 241, 240);
+        border-bottom: none;
+        border-right: none;
+        width: 70%;
+    }
+
+    #mailpanel-bar {
+        padding: 3% 0%;
+        border-bottom: 3px solid rgb(240, 241, 240);
+        display: flex;
+        gap: 1%;
+    }
+
+    #mailpanel-bar>div:first-child {
+        border: 5px solid rgb(240, 241, 240);
+        padding: 1%;
+        border-radius: 4px;
+
+    }
+
+    #mailpanel-bar>div {
+        border: 0px solid;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #inbox-infopanel {
+        padding: 1%;
+    }
+
+    #infopanel-bar {
+        border: 0px solid;
+        display: flex;
+        padding: 0% 2%;
+        margin: 3% 0%;
+        justify-content: space-between;
+    }
+
+    #infopanel-bar h5 {
+        border: 0px solid;
+        font-size: 100%;
+        font-weight: bolder;
+    }
+
+    #infopanel-bar h5:hover {
+        cursor: pointer;
+    }
+
+    #url-credentials {
+        display: flex;
+        gap: 2%;
+    }
+
+    #url-credentials>div {
+        width: 50%;
+        padding: 1% 2%;
+    }
+
+    #mailpanel-select {
+        padding: 1%;
+        border-radius: 7px;
+        margin-bottom: 3%;
+        border: 1px solid rgb(208, 210, 217);
+    }
+
+    #code-section {
+        margin-top: 2%;
+        border: 1px solid;
+        width: 100%;
+    }
+
+    #code-terminal {
+        padding: 3% 2%;
+    }
+
+    .terminal-redtext {
+        color: red;
+    }
+
+    .inbox-body-bluetext {
+        color: blue;
+    }
+
+    .inbox-body-bluetext:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    .inbox-boxProp {
+        border: 1px solid rgb(239, 239, 238);
+        padding: 0% 2%;
+        border-radius: 7px;
+        background-color: rgb(249, 250, 251);
+    }
+
+    .inbox-boxProp button {
+        background-color: blue;
+        color: white;
+        border: none;
+        margin: 1%;
+        border-radius: 5px;
+    }
+
+    #appendMail {
+        border: 0px solid;
+        line-height: 80%;
+    }
+
+    .eachMail {
+        border: 1px solid;
+        margin: 2% 0%;
+        padding-top: 2%;
+        padding-left: 2%;
+        background-color: aqua;
+        border-left: none;
+        border-right: none;
+    }
+
+    #howitworks {
+        border: 0px solid;
+        text-align: center;
+        margin-top: 50%;
+    }
+
+    #inboxsearchbar {
+        border: none;
+        width: 60%;
+    }
+    #motherdiv{
+        border: 0px solid;
+        display: flex;
+        justify-content: space-between;
+    }
+    #rightdiv{
+        border: 0px solid;
+        display: grid;
+        align-items:flex-end;
+        line-height: 150%;
+    }
+    

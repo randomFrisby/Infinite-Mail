@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./styles/email_logs.css">
     <link rel="stylesheet" href="./styles/user_home.css">
     <link rel="stylesheet" href="./styles/account_settings.css">
+    <link rel="stylesheet" href="./styles/inbox.css">
 
     <script src="https://kit.fontawesome.com/81ff3434ff.js" crossorigin="anonymous"></script>
 
@@ -78,11 +79,11 @@
                 </div>
             </div>
         </div>
-        <div id="mainpanel" style="width: 80%;">
+        <div id="mainpanel" style="width: 84%;">
             <div id="nav">
                 <div>
                     <div id="threelines"><i class="fa-solid fa-bars"></i></div>
-                    <div id="name">Home</div>
+                    <!-- <div id="name">Home</div> -->
                 </div>
                 <div id="uname">xyz</div>
             </div>
@@ -108,6 +109,9 @@
 
     import api_token_components from "./components/api_token.js";
     import { api_token_functionality } from "./scripts/functionality/api_token.js";
+
+    import inbox_component from './components/sandbox.js'
+    import { inbox_page_functionality } from './scripts/functionality/inbox.js';
 
 
     // 0. default container content will `userHomeComponent`
@@ -175,16 +179,15 @@
             switch (i) {
                 case 0: container.innerHTML = userHomeComponent();
                     break;
-                case 1: container.innerHTML = null;
+                case 1: container.innerHTML = userHomeComponent();
                      break;
-                case 2: container.innerHTML = null
+                case 2: container.innerHTML = userHomeComponent();
                      break;
-                case 3: container.innerHTML = null
+                case 3: container.innerHTML = userHomeComponent();
                      break;
-                case 4: container.innerHTML = api_token_components();
-                api_token_functionality(user);
+                case 4: container.innerHTML = userHomeComponent();
                      break;
-                case 5: container.innerHTML = null
+                case 5: container.innerHTML = userHomeComponent();
                      break;
                 case 6: container.innerHTML = accountSettingsComponents();
                 account_settings_functionality(user);
@@ -201,17 +204,17 @@
                 case 0: container.innerHTML = emailLogsComponent();
                 email_logs_functionality(user);
                     break;
-                case 1: container.innerHTML = null
+                case 1: container.innerHTML = userHomeComponent();
                     break;
-                case 2: container.innerHTML = null
+                case 2: container.innerHTML = userHomeComponent();
                     break;
-                case 3: container.innerHTML = null
+                case 3: container.innerHTML = userHomeComponent();
                     break;
-                case 4: container.innerHTML = null
+                case 4: container.innerHTML = userHomeComponent();
                     break;
-                case 5: container.innerHTML = null
+                case 5: container.innerHTML = userHomeComponent();
                     break;
-                case 6: container.innerHTML = null
+                case 6: container.innerHTML = userHomeComponent();
                     break;
             }
         })
@@ -220,6 +223,14 @@
  //-----------------appending Inbox html in container---------------
     let sandinbox=document.querySelector('#menu>div:nth-child(5)>div') 
      sandinbox.onclick=(()=>{
-         container.innerHTML=null;
+         container.innerHTML=inbox_component();
+                inbox_page_functionality(user);
+     })
+
+//-----------------appending API Token html in container---------------
+    let apitokens=document.querySelector('#menu>div:nth-child(10)>div:first-child') 
+     apitokens.onclick=(()=>{
+        container.innerHTML= api_token_components();
+                api_token_functionality(user);
      })
 </script>
