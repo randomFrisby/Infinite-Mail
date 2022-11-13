@@ -8,11 +8,9 @@ let navbar = () => {
 </div>
 <div id="kacontainer">
     <div class="kamenubar">
-        <a href="./index.html"
-            ><img
-                src="https://mailtrap.io/wp-content/uploads/2021/04/mailtrap-new-logo.svg"
-                alt="mailtrap"
-        /></a>
+        <div id="logo">
+            <img src="https://i.ibb.co/xFm0fXk/Light-Blue-Sci-Fi-Futuristic-Animated-Logo.png" alt="Error">
+        </div>
         <ul>
             <li>
                 <a href="#"

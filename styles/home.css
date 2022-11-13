@@ -9,6 +9,19 @@
 	box-sizing: border-box;
 }
 
+#logo{
+    margin-left: 12%;
+    margin-top: 0px;
+    line-height: 0px;
+}
+#logo>img{
+    margin-top: 0px;
+    line-height: 0px;
+    width: 120px;
+    height: 50px;
+    border-radius: 5px;
+}
+
 #kamain_con {
 	height: 1050px;
 	background-color: var(--color-body);
