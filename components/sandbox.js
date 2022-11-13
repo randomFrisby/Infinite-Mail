@@ -29,21 +29,21 @@ let inbox_component=(()=>{
         </div>
     </div>
     <div id="inbox-infopanel">
-        <h2>My Inbox</h2>
+        <h3>My Inbox</h3>
         <div id="disappeardata">
             <div id="infopanel-bar">
-                <h3 style="color: blue; text-decoration: underline;">SMTP Settings</h3>
-                <h3>Email Address</h3>
-                <h3>Auto Forward</h3>
-                <h3>Manual Fordward</h3>
-                <h3>Team Members</h3>
+                <h5 style="color: blue; text-decoration: underline;">SMTP Settings</h5>
+                <h5>Email Address</h5>
+                <h5>Auto Forward</h5>
+                <h5>Manual Fordward</h5>
+                <h5>Team Members</h5>
             </div>
             <div id="infopanel-content">
                 <div>
-                    <h3>SMTP/POP3</h3>
+                    <h5>SMTP/POP3</h5>
                     <p>Use these settings to send messages directly from your email client or mail transfer agent.
                     </p>
-                    <p><i class="fa-solid fa-triangle-exclamation"></i><b> Don't disclose your username or password
+                    <p><i style="color: red;" class="fa-solid fa-triangle-exclamation"></i><b> Don't disclose your username or password
                             as this may result in your inbox getting filled up
                             with spam.</b></p>
                     <p>Show Credentials</p>
@@ -111,52 +111,53 @@ let inbox_component=(()=>{
                             </table>
                         </div>
                     </div>
+                    <br>
                     <h4>Integrations</h4>
-                    <select id="mailpanel-select" class="integrations_selector i8g6629 szgcfnt i1ixrrkg"
+                    <select id="mailpanel-select"
                         aria-label="tabs_selector" name="tabs_selector">
                         <optgroup label="Command Line">
-                            <option value="a" aria-controls="tabpanel_tab_curl">cURL</option>
-                            <option value="" aria-controls="tabpanel_tab_telnet">Telnet</option>
+                            <option value="a">cURL</option>
+                            <option value="">Telnet</option>
                         </optgroup>
                         <optgroup label="Ruby">
-                            <option value="a" aria-controls="tabpanel_tab_rails">Ruby on Rails</option>
-                            <option value="" aria-controls="tabpanel_tab_ruby">Ruby (net/smtp)</option>
+                            <option value="a">Ruby on Rails</option>
+                            <option value="">Ruby (net/smtp)</option>
                         </optgroup>
                         <optgroup label="Python">
-                            <option value="a" aria-controls="tabpanel_tab_smtplib">smtplib</option>
-                            <option value="tab_django" aria-controls="tabpanel_tab_django">Django</option>
-                            <option value="a" aria-controls="tabpanel_tab_flask">Flask-Mail</option>
+                            <option value="a">smtplib</option>
+                            <option value="tab_django">Django</option>
+                            <option value="a">Flask-Mail</option>
                         </optgroup>
                         <optgroup label="PHP">
-                            <option value="tab_cakephp37" aria-controls="tabpanel_tab_cakephp37">CakePHP 3.7+
+                            <option value="tab_cakephp37">CakePHP 3.7+
                             </option>
-                            <option value="a" aria-controls="tabpanel_tab_cakephp">CakePHP &lt; 3.7</option>
-                            <option value="tab_codeigniter" aria-controls="tabpanel_tab_codeigniter">CodeIgniter
+                            <option value="a">CakePHP &lt; 3.7</option>
+                            <option value="tab_codeigniter">CodeIgniter
                             </option>
-                            <option value="a" aria-controls="tabpanel_tab_fuelphp">FuelPHP</option>
-                            <option value="tab_laravel" aria-controls="tabpanel_tab_laravel">Laravel 7+</option>
-                            <option value="a" aria-controls="tabpanel_tab_php_mailer">PHPMailer</option>
-                            <option value="tab_symfony" aria-controls="tabpanel_tab_symfony">Symfony 5+</option>
-                            <option value="a" aria-controls="tabpanel_tab_wordpress">WordPress</option>
-                            <option value="tab_yii" aria-controls="tabpanel_tab_yii">Yii Framework</option>
-                            <option value="" aria-controls="tabpanel_tab_zend">Zend Framework</option>
+                            <option value="a">FuelPHP</option>
+                            <option value="tab_laravel" >Laravel 7+</option>
+                            <option value="a" >PHPMailer</option>
+                            <option value="tab_symfony" >Symfony 5+</option>
+                            <option value="a" >WordPress</option>
+                            <option value="tab_yii" >Yii Framework</option>
+                            <option value="" >Zend Framework</option>
                         </optgroup>
                         <optgroup label="Node.js">
-                            <option value="a" aria-controls="tabpanel_tab_nodejs">Nodemailer</option>
+                            <option value="a" >Nodemailer</option>
                         </optgroup>
                         <optgroup label="Java, Scala">
-                            <option value="" aria-controls="tabpanel_tab_play">Play-Mailer</option>
+                            <option value="" >Play-Mailer</option>
                         </optgroup>
                         <optgroup label="Perl">
-                            <option value="tab_perl" aria-controls="tabpanel_tab_perl">MIME::Lite</option>
-                            <option value="a" aria-controls="tabpanel_tab_perl_net_smtp">Net::SMTP
+                            <option value="tab_perl" >MIME::Lite</option>
+                            <option value="a" >Net::SMTP
                             </option>
                         </optgroup>
                         <optgroup label="C#">
-                            <option value="tab_csharp" aria-controls="tabpanel_tab_csharp">Plain C#</option>
+                            <option value="tab_csharp" >Plain C#</option>
                         </optgroup>
                         <optgroup label="Other">
-                            <option value="a" aria-controls="tabpanel_tab_postfix">Postfix</option>
+                            <option value="a" >Postfix</option>
                         </optgroup>
                     </select>
                     <div>
@@ -193,10 +194,11 @@ let inbox_component=(()=>{
                     </div>
                 </div>
                 <div style="display: none;">
-                    <h3>Inbox Email Address</h3>
+                    <h5>Inbox Email Address</h5>
                     <p>Send emails to Mailtrap from your CRM or sending service (Sendgrid, Gmail, etc.) without
                         additional integration. Simulate sending to multiple recipients with "+" email alias (i.e
                         94fbe5eb96-31cba2+1@inbox.mailtrap.io).</p>
+                        <br>
                     <div id="email-direction" class="inbox-boxProp">
                         <p>Imitate sending to unique recipients.</p>
                         <p>Route emails from the third-party sending tools to Mailtrap.</p>
@@ -211,8 +213,9 @@ let inbox_component=(()=>{
                     </div>
                 </div>
                 <div style="display: none;">
-                    <h3>Auto Forwarding Rules</h3>
+                    <h5>Auto Forwarding Rules</h5>
                     <p>Emails sent to the allowed addresses and/or domains will be forwarded to real recipients.</p>
+                    <br>
                     <div id="email-direction" class="inbox-boxProp">
                         <p>Allow sending test emails to whitelisted real recipients.</p>
                         <p>Automatically receive test emails in real inboxes to preview them in different email
@@ -226,10 +229,11 @@ let inbox_component=(()=>{
                     </div>
                 </div>
                 <div style="display: none;">
-                    <h3>Manual Forwarding Rules</h3>
+                    <h5>Manual Forwarding Rules</h5>
                     <p>You can send emails to real whitelisted recipients for testing purposes.<br>
                         Open the email you wish to forward and click the "Forward email" icon in the message menu.
                     </p>
+                    <br>
                     <div id="email-direction" class="inbox-boxProp">
                         <p>Forward any email to the real email address of your choice.</p>
                         <p>Quickly share a test email with your colleagues or clients.</p>
@@ -242,7 +246,7 @@ let inbox_component=(()=>{
                     </div>
                 </div>
                 <div style="display: none;">
-                    <h3>Inbox Team Members</h3>
+                    <h5>Inbox Team Members</h5>
                     <p>Share access to this inbox with anyone. If they don't have a Mailtrap account yet, they will
                         be asked to create a free account.</p>
                     <div id="email-direction" class="inbox-boxProp">

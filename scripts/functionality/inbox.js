@@ -1,8 +1,8 @@
-let inbox_page_functionality=(()=>{
+let inbox_page_functionality=((user)=>{
 
     //----------------------------switching between inbox page tabs--------------------------------
 
-    let choose = document.querySelectorAll('#infopanel-bar>h3')
+    let choose = document.querySelectorAll('#infopanel-bar>h5')
     choose.forEach((el, i) => {
         el.addEventListener('click', () => {
             //console.log(i)
@@ -11,7 +11,7 @@ let inbox_page_functionality=(()=>{
                     document.querySelector(`#infopanel-content>div:nth-child(${j + 1})`).style.display = 'none';
                     console.log(j)
 
-                    let yolo = document.querySelector(`#infopanel-bar>h3:nth-child(${j + 1})`)
+                    let yolo = document.querySelector(`#infopanel-bar>h5:nth-child(${j + 1})`)
                     yolo.style.color = 'black'
                     yolo.style.textDecoration = 'none'
                 }
@@ -46,10 +46,14 @@ let inbox_page_functionality=(()=>{
     let howitworks = document.getElementById('howitworks')
     let fetchdata = async () => {
         try {
-            let api = 'http://localhost:3000/posts'
-            let ftch = await fetch(api)
-            let maildata = await ftch.json();
-            //console.log('maildata: ', maildata);
+                let api = 'http://localhost:3000/users'
+                let ftch = await fetch(api)
+                //console.log('ftch: ', ftch);
+                let mdata = await ftch.json();
+                //console.log('mdata: ', mdata);
+            //let maildata=user.data;    
+                let maildata = mdata[0].data;
+            console.log('maildata: ', maildata);
             pend(maildata)
             howitworks.style.display = 'none'
         }
@@ -69,11 +73,11 @@ let inbox_page_functionality=(()=>{
             //console.log(el.auth.pass)
             if (originalPass == el.auth.pass) {
                 let dv = document.createElement('div')
-                let message = document.createElement('h3')
+                let message = document.createElement('h4')
                 let to = document.createElement('p')
                 let from = document.createElement('p')
 
-                message.innerText = el.body;
+                message.innerText = el.message;
                 to.innerText = `To: ${el.to}`;
                 from.innerText = el.from;
                 from.style.display = 'none'
@@ -102,7 +106,7 @@ let inbox_page_functionality=(()=>{
 
         mdiv.setAttribute('id','motherdiv')
         ldiv.setAttribute('id','leftdiv')
-        message.innerText = el.body;
+        message.innerText = el.message;
         message.style.color='blue'
         from.innerText = `From: ${el.from}`;
         to.innerText = `To: ${el.to}`;
@@ -146,7 +150,7 @@ let inbox_page_functionality=(()=>{
     // let mailPass=document.querySelectorAll(".mailpass")
     // let fetchpass=async()=>{
     //     try{
-    //         let api='http://localhost:3000/posts'
+    //         let api='http://localhost:3000/users'
     //         let ftch=await fetch(api)
     //         let maildata=await ftch.json();
     //         appendpass(maildata)
