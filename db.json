@@ -1,58 +1,5 @@
 {
-  "users": [
-    {
-    "id": 1342,
-    "name": "user 1",
-    "username": "adgvasd90",
-    "password": "adgvasd90",
-    "today": 5,
-    "week": 10,
-    "month": 20,
-    "card": "24752 2149 2342",
-    "plan": "free",
-    "api_token": [
-        "3wriUcGo",
-        "2h0oH4K9",
-        "rBgoHJpB",
-        "RNrYb9xG",
-        "XOSDhiaH"
-    ],
-    "total": "3.5K",
-    "data": [
-        {
-            "email": "abc@email.com",
-            "status": "Unread",
-            "spam": 1,
-            "sent_time": "08-11-2022",
-            "clicks": 10,
-            "delivery": 0,
-            "auth": {
-              "user": "bee30d66e96433",
-              "pass": "30adbd2eeec60a"
-              },
-              "from": "jagroshansingh@json-server.io",
-              "to": "jagroshansingh615@gmail.com",
-              "message": "How's the josh? High Sir!"
-        },
-        {
-            "email": "xyz@yahoo.com",
-            "status": "Pending",
-            "spam": 0,
-            "sent_time": "10-09-2022",
-            "clicks": 34,
-            "delivery": 1
-        },
-        {
-            "email": "jkl@gmail.com",
-            "status": "Read",
-            "spam": 1,
-            "sent_time": "20-03-2019",
-            "clicks": 100,
-            "delivery": 1
-        }
-    ]
-}
-],
+  "users": [],
   "admin": [
     {
       "id": "1",

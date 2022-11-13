@@ -44,15 +44,17 @@ let inbox_page_functionality=((user)=>{
     //-------------------------fetching data from server----------------------------------
 
     let howitworks = document.getElementById('howitworks')
-    let fetchdata = async () => {
+/*     let fetchdata = async () => {
         try {
                 let api = 'http://localhost:3000/users'
+                // `http://localhost:3000/users/user_`
                 let ftch = await fetch(api)
                 //console.log('ftch: ', ftch);
                 let mdata = await ftch.json();
                 //console.log('mdata: ', mdata);
             //let maildata=user.data;    
                 let maildata = mdata[0].data;
+                // mdata.data -> array of object 
             console.log('maildata: ', maildata);
             pend(maildata)
             howitworks.style.display = 'none'
@@ -61,38 +63,36 @@ let inbox_page_functionality=((user)=>{
             console.log('err: ', err);
             howitworks.style.display = 'block'
         }
-    }
+    } */
 
  //----------------------appending data as mail-----------------------------   
-    fetchdata()
+    // fetchdata()
+
     let pend = (maildata) => {
         maildata.forEach((el) => {
             //console.log(el)
-            let originalPass = document.getElementById('mailpass').innerText
             //console.log(originalPass)
             //console.log(el.auth.pass)
-            if (originalPass == el.auth.pass) {
-                let dv = document.createElement('div')
-                let message = document.createElement('h4')
-                let to = document.createElement('p')
-                let from = document.createElement('p')
+            let dv = document.createElement('div')
+            let message = document.createElement('h6')
+            let to = document.createElement('p')
+            let from = document.createElement('p')
 
-                message.innerText = el.message;
-                to.innerText = `To: ${el.to}`;
-                from.innerText = el.from;
-                from.style.display = 'none'
-                dv.append(message, to, from)
-                dv.setAttribute('class', 'eachMail')
-                dv.onclick = (() => {
-                    bond(el)
-                })
+            message.innerText = el.message;
+            to.innerText = `To: ${el.email}`;
+            from.innerText = user.email;
+            from.style.display = 'none'
+            dv.append(message, to, from)
+            dv.setAttribute('class', 'eachMail')
+            dv.onclick = (() => {
+                bond(el)
+            })
 
-                document.getElementById('appendMail').append(dv)
-            }
+            document.getElementById('appendMail').append(dv)
 
         })
     }
-
+    pend(user.data);
 //----------------------accessing the complete mail--------------------------    
     let bond = (el) => {
         console.log(el)
@@ -108,8 +108,8 @@ let inbox_page_functionality=((user)=>{
         ldiv.setAttribute('id','leftdiv')
         message.innerText = el.message;
         message.style.color='blue'
-        from.innerText = `From: ${el.from}`;
-        to.innerText = `To: ${el.to}`;
+        from.innerText = `From: ${user.email}`;
+        to.innerText = `To: ${el.email}`;
         ldiv.append(message, from, to)
         
 
@@ -144,27 +144,6 @@ let inbox_page_functionality=((user)=>{
         
     }
 
-
-//---------------appending username and password-----------------------------------
-
-    // let mailPass=document.querySelectorAll(".mailpass")
-    // let fetchpass=async()=>{
-    //     try{
-    //         let api='http://localhost:3000/users'
-    //         let ftch=await fetch(api)
-    //         let maildata=await ftch.json();
-    //         appendpass(maildata)
-    //     }
-    //     catch(err){
-    //         console.log('err: ', err);
-    //     }
-    // }
-
-    // let appendpass=(maildata)=>{
-    //     mailPass.forEach((el)=>{
-    //         el.innerText=maildata......
-    //     })
-    // }
 
 })
 

@@ -78,7 +78,7 @@ const account_settings_functionality = (user) => {
                         // 1. POST data to `recently-deleted` 
                         // 2. DELETE request to server
                         // 3. Redirect to login page when account deleted or doesn't exist
-                        recentlyDeleted(user);
+                        // recentlyDeleted(user);
                         deleteFromServer(user);
                     }
                 };
@@ -102,7 +102,7 @@ const patchRequest = async ({ id }, newUsername) => {
     let send_this_data = {
         "name": newUsername
     };
-    let res = await fetch(`http://localhost:3000/users/${id}`, {
+    let res = await fetch(`https://hidden-journey-56401.herokuapp.com/users/${id}`, {
         method: 'PATCH',
         body: JSON.stringify(send_this_data),
         headers: {
@@ -110,12 +110,13 @@ const patchRequest = async ({ id }, newUsername) => {
         }
     });
     let data = await res.json();
+    window.location.reload();
 }
 
 const recentlyDeleted = async (user) => {
 
     try {
-        let res = await fetch(`http://localhost:3000/recently-deleted`, {
+        let res = await fetch(`https://hidden-journey-56401.herokuapp.com/recently-deleted`, {
             method: 'POST',
             body: JSON.stringify(user),
             headers: {
@@ -135,7 +136,7 @@ const recentlyDeleted = async (user) => {
 const deleteFromServer = async ({ id }) => {
      
     try {
-        let res = await fetch(`http://localhost:3000/users/${id}`, {
+        let res = await fetch(`https://hidden-journey-56401.herokuapp.com/users/${id}`, {
             method: "DELETE",
             headers: {
                 'Content-Type': 'application/json'
@@ -144,6 +145,7 @@ const deleteFromServer = async ({ id }) => {
     
         let data = await res.json();
         alert("Account has been deleted! 😐");
+        window.location.reload();
     }
     catch(err) {
         console.log("error in line 140", err);

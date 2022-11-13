@@ -52,7 +52,7 @@ const Register = async() => {
 
     // console.log("send_this_data", send_this_data);
 
-    let res = await fetch(`http://localhost:3000/users`, {
+    let res = await fetch(`https://hidden-journey-56401.herokuapp.com/users`, {
         method: "POST",
         body: JSON.stringify(send_this_data),
         headers: {
@@ -61,6 +61,8 @@ const Register = async() => {
     });
 
     let data = await res.json();
+    alert("Sign Up Successful! ✅");
+    window.location.reload();
 };
 
 const createUserData = (signUpInfo) => {
