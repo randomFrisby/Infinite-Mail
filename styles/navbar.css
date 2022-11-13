@@ -1,0 +1,121 @@
+:root {
+	--color-primary: rgb(36, 63, 93);
+	--color-lightgreen: rgb(34, 209, 114);
+}
+
+#kanavbar {
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+
+.kadonate {
+	width: 100%;
+	height: 64px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(26, 46, 68);
+}
+
+.kadonate > a {
+	color: white;
+	text-decoration: none;
+	font-size: 22px;
+}
+
+#kacontainer {
+	display: flex;
+}
+
+.kamenubar {
+	background-color: white;
+	height: 70px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 40px 70px;
+}
+
+.kamenubar ul {
+	list-style: none;
+	display: flex;
+}
+
+.kamenubar ul li {
+	padding: 0 26px;
+	position: relative;
+}
+
+.kamenubar ul li a {
+	text-decoration: none;
+	color: var(--color-primary);
+	font-size: 1rem;
+	font-weight: bold;
+	transition: all 0.2s;
+}
+
+.kamenubar ul li a:hover {
+	color: var(--color-lightgreen);
+}
+.dropdown_menu {
+	display: none;
+}
+
+.kaflex {
+	display: flex;
+	margin: 15px 0px;
+}
+
+.kaside {
+	margin-left: 15px;
+}
+
+.kaside > p {
+	font-weight: 100;
+}
+
+.kamenubar ul li:hover .dropdown_menu {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	border-radius: 10px;
+	background-color: white;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.dropdown_menu ul {
+	display: block;
+	margin: 10px;
+}
+
+.dropdown_menu ul li {
+	width: 290px;
+	padding: 10px;
+}
+
+.kalog {
+	background-color: transparent;
+	color: var(--color-primary);
+	padding: 8px 15px;
+	font-size: 16px;
+	border-radius: 10px;
+	border: 1px solid;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+.kasign {
+	background-color: var(--color-lightgreen);
+	padding: 8px 15px;
+	font-size: 16px;
+	color: white;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+}

@@ -1,0 +1,253 @@
+:root {
+	--color-primary: rgb(32, 44, 69);
+	--color-lightgreen: rgb(34, 209, 114);
+	--color-body: rgb(249, 249, 247);
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#kamain_con {
+	height: 1050px;
+	background-color: var(--color-body);
+}
+#ka_container {
+	width: 40%;
+	margin: auto;
+	text-align: center;
+}
+
+#ka_container > h1 {
+	padding: 70px 0px 50px;
+	color: var(--color-primary);
+	font-weight: 600;
+	font-size: 2.55rem;
+}
+#ka_container > p {
+	color: rgb(32, 73, 110);
+	padding-bottom: 25px;
+	font-size: 1.3rem;
+}
+
+#ka_container > div > a > button {
+	background-color: var(--color-lightgreen);
+	padding: 13px 19px;
+	color: white;
+	border-radius: 10px;
+	border: none;
+	font-size: 1.1rem;
+	margin: 30px 0px 50px;
+	cursor: pointer;
+}
+.kacon {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	width: 49%;
+	margin: auto;
+}
+
+.kaviimg {
+	width: 70%;
+	margin: auto;
+}
+.kaviimg > img {
+	width: 100%;
+	margin-top: 50px;
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #1a2e44;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: var(--color-lightgreen);
+}
+
+#kaemailtesting {
+	width: 100%;
+	height: 900px;
+	background-color: white;
+	padding-top: 200px;
+}
+
+#kaemailtesting > h1 {
+	text-align: center;
+}
+
+.kaemailcontain {
+	width: 80%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 70px 40px;
+	margin: auto;
+	margin-top: 50px;
+	padding: 30px 0px;
+}
+.kaemailcontain > div > h3 {
+	color: #1a2e44;
+}
+.kaemailcontain > div > div > p {
+	color: grey;
+	margin-top: 13px;
+}
+.kaemailcontain > div > img {
+	width: 70px;
+	margin-right: 15px;
+}
+.kaemailcontain > div {
+	display: flex;
+}
+.kaemailcontain > div {
+	width: 85%;
+	margin: auto;
+}
+.katen {
+	width: 100%;
+	padding: 80px 0px 50px 0px;
+	background-color: white;
+	color: var(--color-primary);
+}
+
+.katen > h1 {
+	text-align: center;
+}
+
+.katen-one {
+	width: 60%;
+	margin: auto;
+	margin-top: 80px;
+}
+.katen-one > div {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+	margin-top: 80px;
+}
+
+.katen-one > div > div {
+	width: 15rem;
+}
+
+.katen-one > div > div > ul {
+	color: var(--color-lightgreen);
+	font-size: 34px;
+}
+.katen-one > div > div > ul > li > span {
+	font-size: 16px;
+	color: grey;
+}
+
+.katen > .btn{
+	width: 10%;
+	margin: auto;
+	margin-top: 50px;
+}
+.katen > div > a > button {
+	background-color: var(--color-lightgreen);
+	padding: 13px;
+	color: white;
+	border-radius: 10px;
+	border: none;
+	font-size: 1.1rem;
+	cursor: pointer;
+}
+
+/* #kapoints {
+	width: 100%;
+	height: 600px;
+	background-color: var(--color-body);
+	border: 1px solid red;
+	text-align: center;
+	padding: 50px 0px;
+}
+
+.kapoints-container {
+	width: 80%;
+	margin: auto;
+	margin-top: 50px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	border: 1px solid red;
+}
+#kapoints > span:first-child {
+	font-size: xx-large;
+}
+#kapoints > span:nth-child(3) {
+	font-size: 13px;
+	color: grey;
+}
+.kapoints-container > img {
+	width: 29rem;
+}
+
+.kapoints-container > ol > li {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1Ni4wMTMiIGhlaWdodD0iNTYuMDEzIiB2aWV3Qm94PSIwIDAgNDIgNDIiPjxwYXRoIGQ9Ik0xNyA0MmMxMS4xNSAwIDI1LTEwLjM5IDI1LTIyUzMxLjMzIDAgMjAuMTggMCAwIDkuNCAwIDIxczUuODkgMjEgMTcgMjF6IiBmaWxsPSIjMjJkMTcyIi8+PC9zdmc+);
+	background-repeat: no-repeat;
+} */
+
+.kaju{
+	width: 100%;
+	position: relative;
+	color: var(--color-primary);
+	padding: 50px 0px;
+	overflow: hidden;
+	background-color: var(--color-body);
+}
+
+.kaju>h1{
+	text-align: center;
+	padding: 100px 0px;
+}
+
+.kaju>img{
+	position: absolute;
+	left: 160px;
+	bottom: -250px;
+}
+
+.kaju>div{
+	position: relative;
+	width: 55%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap: 60px 20px;
+}
+
+.kaju>div>div{
+	position: relative;
+	width: 100%;
+	height: 250px;
+	padding: 38px 18px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.kaju>div>div>img{
+	position: absolute;
+	z-index: 0.5;
+	top: -40px;
+	width: 60px;
+
+}
+
+.kaju>div>div>h3{
+	padding-bottom: 15px;
+	font-size: 18px;
+}
+.kaju>div>div>p{
+	color: grey;
+	font-size: 16px;
+}
+
+.kaju>div>div>p>span{
+	color: rgb(34, 186, 246);
+}

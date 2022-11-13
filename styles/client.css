@@ -1,0 +1,65 @@
+#kasection{
+    width: 100%;
+    height: 700px;
+    background-color: rgb(249, 249, 247);
+    border: 1px solid red;
+    position: relative;
+    z-index: 1;
+}
+
+.kacircle{
+    bottom: 4px;
+    left: 500px;
+    position: absolute;
+    z-index: 0;
+}
+.swiper{
+    width: 1100px;
+}
+.kaclient>h1{
+    padding-top: 100px;
+    text-align: center;
+}
+
+.kaclient .kacard{
+    width: 25%;
+    height: 35%;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.kacard>.kacardinfo{
+    padding: 30px 40px 70px;
+}
+.kacard>.kacardinfo span{
+    color: rgb(36,63,93);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.kacard .kacardinfo>span:nth-child(2){
+    color: grey;
+    font-size: 14px;
+    margin-left: 15px;
+    font-weight: 100;
+    cursor: pointer;
+}
+.kacard .kacardinfo>span:last-child{
+    color: grey;
+    font-size: 14px;
+    font-weight: 100;
+    cursor: pointer;
+}
+.kacard .kacardinfo>p{
+    margin: 11px 0px;
+    color: rgb(104, 98, 98);
+
+}
+
+.kacard .kacardinfo>span:nth-child(2):hover{
+    color: rgb(34,209,114);
+}
+.kacard .kacardinfo>span:last-child:hover{
+    color: rgb(34,209,114);
+}

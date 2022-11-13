@@ -1,0 +1,59 @@
+:root{
+    --color-primary: rgb(36,63,93);
+    --color-lightgreen: rgb(34,209,114);
+}
+
+#kafooter{
+    width: 100%;
+    height: 350px;
+}
+
+.kafootercontainer{
+    padding: 50px;
+}
+.kafooterrow{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.kafooterrow ul{
+    list-style: none;
+}
+.kafooterrow ul li{
+    padding: 6px 0px;
+}
+
+.kafooterrow ul li a{
+    text-decoration: none;
+    color: grey;
+}
+.kafooterrow ul li a:hover{
+    color: var(--color-lightgreen);
+}
+
+.kafooterrow >p{
+    color: grey;
+}
+
+.kacolspan{
+    color: grey;
+}
+.kacolspan span:hover{
+    color: var(--color-lightgreen);
+    cursor: pointer;
+}
+.kafooterimg{
+    margin: 20px 0px 111px;
+}
+.kafooterimg ul{
+    display: flex;
+}
+
+
+.kafooterimg ul li a img{
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOSIgaGVpZ2h0PSI0MSI+PGRlZnM+PGNsaXBQYXRoIGlkPSJhIj48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDM5djQxSDB6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI2EpIj48cGF0aCBkPSJNMi40OCAxOS44NGExOC42MyAxOC42MyAwIDAwNS42NCAxNi42QzEyLjE3IDQwIDE3LjM5IDQxIDIyLjQzIDQxYTE4LjY2IDE4LjY2IDAgMDA4LjgtMS44MkExMy45MiAxMy45MiAwIDAwMzggMzEuNTdjMi4xNC01LjcxLjQzLTEyLjMxLTIuMy0xNy4wOWEyOC44IDI4LjggMCAwMC02LTcuMzVDMjUuOTMgMy45NCA4LjgtMi44MyAzLjI5IDE1IiBmaWxsPSIjMWEyZTQ0Ii8+PHBhdGggZD0iTS42IDE3LjIyYTE4LjYgMTguNiAwIDAwNS42NCAxNi41NmM0IDMuNTQgOS4yNyA0LjYxIDE0LjMxIDQuNTZhMTguNzcgMTguNzcgMCAwMDguOC0xLjgxIDE0IDE0IDAgMDA2Ljc1LTcuNjJjMi4xMy01LjcxLjQyLTEyLjMxLTIuMzEtMTcuMDlhMjguOCAyOC44IDAgMDAtNi03LjM1QzI0LjA5IDEuMjggNy01LjQ1IDEuNDEgMTIuNCIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik0uMjEgMTcuMTRDLTEuMTYgMjYuNTIgNC4xIDM1LjM4IDEzIDM3Ljk0YzguNSAyLjQ0IDE5LjcuODkgMjMuNDEtOC41QzM5Ljk0IDIwLjU5IDM0LjkgOS42NSAyOC4wNiA0YTIwLjI0IDIwLjI0IDAgMDAtMTIuMy00QzguMjkgMCAzLjMzIDUuMTggMS4wNyAxMi4yMmMtLjIyLjU4LjUxIDEuMDYuNzIuMzVDMy43MSA2LjY5IDcuNiAyIDEzLjg0IDEuMmEyMC4yMiAyMC4yMiAwIDAxMTEuODcgMi41MkMzMS43NCA3IDM2LjA5IDE1IDM2LjY1IDIxLjkyYTE0LjQyIDE0LjQyIDAgMDEtNS42IDEzYy0zLjggMi43NS04LjcxIDMuMTUtMTMuMiAyLjc5LTQuNy0uMzktOS4zOS0yLTEyLjY0LTUuNjZBMTguNTEgMTguNTEgMCAwMTEgMTcuMjdjLjExLS43MS0uNy0uOC0uNzktLjEzeiIgZmlsbD0iIzFhMmU0NCIvPjwvZz48L3N2Zz4=);
+}
+.kafooterimg ul li:nth-child(2){
+    padding-left: 20px;
+    padding-right: 20px;
+}

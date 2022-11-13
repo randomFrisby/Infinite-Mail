@@ -1,0 +1,100 @@
+.kaclient{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    background-color: #f9f9f7;
+}
+.kaclient>img{
+    width: 19rem;
+    position: absolute;
+    left: 550px;
+    bottom: -140px;
+}
+.kaclient>h1{
+    text-align: center;
+    margin: 71px;
+    font-size: 2.3rem;
+}
+
+.kasiko>button{
+    position: absolute;
+    padding: 10px 13px;
+    top: 56%;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.pre-btn,
+.nxt-btn{
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.pre-btn{
+    left: 13%;
+}
+.nxt-btn{
+    right: 13%;
+}
+.kasiko{
+    width: 75%;
+    height: 350px;
+    margin: auto;
+}
+
+.kacard-container{
+    width: 85%;
+    height: 100%;
+    padding-top: 50px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.kacard-container>.kacard{
+    position: relative;
+    width: 424px;
+    height: 80%;
+    padding: 25px;
+    box-sizing: border-box;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: white;
+    border-radius: 10px;
+}
+.kacard>img{
+    position: absolute;
+    top: -28px;
+}
+.kacard>.kaname{
+    font-size: 23px;
+    font-weight: 500;
+    padding-right: 10px;
+}
+.kacard>.katwittername{
+    color: gray;
+    cursor: pointer;
+    font-size: 14px;
+}
+.kacard>.katwittername:hover{
+    color: #22d172;
+}
+
+.kacard-container{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 30px;
+}
+
+.kacard>p{
+    line-height: 1.7;
+    white-space: normal;
+    font-size: 14px;
+    color: rgb(99, 89, 89);
+}
+.kacard{
+    padding: 30px 0px;
+}
+
