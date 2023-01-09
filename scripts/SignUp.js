@@ -52,7 +52,7 @@ const Register = async() => {
 
     // console.log("send_this_data", send_this_data);
 
-    let res = await fetch(`https://hidden-journey-56401.herokuapp.com/users`, {
+    let res = await fetch(`https://ce2qzn.sse.codesandbox.io/users`, {
         method: "POST",
         body: JSON.stringify(send_this_data),
         headers: {

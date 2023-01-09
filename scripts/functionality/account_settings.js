@@ -102,7 +102,7 @@ const patchRequest = async ({ id }, newUsername) => {
     let send_this_data = {
         "name": newUsername
     };
-    let res = await fetch(`https://hidden-journey-56401.herokuapp.com/users/${id}`, {
+    let res = await fetch(`https://ce2qzn.sse.codesandbox.io/users/${id}`, {
         method: 'PATCH',
         body: JSON.stringify(send_this_data),
         headers: {
@@ -116,7 +116,7 @@ const patchRequest = async ({ id }, newUsername) => {
 const recentlyDeleted = async (user) => {
 
     try {
-        let res = await fetch(`https://hidden-journey-56401.herokuapp.com/recently-deleted`, {
+        let res = await fetch(`https://ce2qzn.sse.codesandbox.io/recently-deleted`, {
             method: 'POST',
             body: JSON.stringify(user),
             headers: {
@@ -136,7 +136,7 @@ const recentlyDeleted = async (user) => {
 const deleteFromServer = async ({ id }) => {
      
     try {
-        let res = await fetch(`https://hidden-journey-56401.herokuapp.com/users/${id}`, {
+        let res = await fetch(`https://ce2qzn.sse.codesandbox.io/users/${id}`, {
             method: "DELETE",
             headers: {
                 'Content-Type': 'application/json'
